@@ -1,0 +1,160 @@
+/* Reset and base styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #F1F1F1;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header {
+  background-color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header .left {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #CEB888;
+}
+
+header .right {
+  display: flex;
+  gap: 2rem;
+}
+
+header .right a {
+  color: #CEB888;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+header .right a:hover {
+  text-decoration: underline;
+}
+
+/* Action Button Container */
+.action-row-container {
+  margin: 2rem;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+}
+
+.action-row {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-between;
+}
+
+/* Buttons */
+button {
+  font-family: "Gill Sans", sans-serif;
+  flex: 1;
+  padding: 0.85rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  background-color: #CEB888;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #bfa16f;
+}
+
+.dashboard-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.section-header {
+    border-bottom: 1.5px solid rgba(0, 0, 0, 0.15);
+    padding-bottom: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.section-header h2{
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+.section-header .subtext {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+
+/* Left Column: Upcoming Assignemtns */
+.assignments-box {
+    flex: 2;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    padding: 1.5rem;
+}
+
+/* Right column container: comtaims Classses and Stats */
+.right-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/*Boxes in right column */
+.classes-box,
+.stats-box {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    padding: 1.5rem;
+}
+
+.placeholder {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.add-class-btn {
+    display: block;
+    margin: 1.5 rem auto 0;
+    padding: 0.6rem 1rem;
+    border: 2px dashed #000;
+    border-radius: 8px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.stats-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 1rem;
+}
+
+.stats-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.stats-list .label {
+    font-weight: 500;
+}
+
+.stats-list .value {
+    font-weight: bold;
+}

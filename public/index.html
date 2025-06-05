@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoilerSchedule</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="left">BoilerScheduler</div>
+        <div class="right">
+            <a href="#">Dashboard</a>
+            <a href="#">Calendar</a>
+            <a href="#">Profile</a>
+        </div>
+        </div>
+    </header>
+    <div class = "action-row-container">
+        <div class = "action-row">
+            <button>+ Add Assignment</button>
+            <button>Add Class</button>
+            <button>Calendar View</button>
+        </div>
+    </div>
+    <main class = "dashboard-layout">
+        <!--Left Column-->
+        <section class ="assignments-box">
+            <div class="section-header">
+                <h2>📅 Upcoming Assignments</h2>
+                <p class = "subtext">Sorted by due date</p>
+            </div>
+
+            <div class ="placeholder">
+                <div class ="placeholder-icon">🕒</div>
+                <strong>No upcoming assignments</strong>
+                <p>You're all caught up! Add some assignments to get started.</p>
+            </div>
+        </section>
+        <!--Right Column-->
+        <div class="right-column">
+
+            <section class = "classes-box">
+                <div class = "section-header">
+                    <h2 class = "top">🎓 Your Classes</h2>
+                </div>
+                <div class = "placeholder">
+                    <div class="placeholder-icon">🎓</div>
+                    <strong>No classes yet</strong>
+                    <p>Add your first class to get started with assignments.</p>
+                </div>
+                <button class = "add-class-btn">+ Add New Class</button>
+            </section>
+
+            <section class = "stats-box">
+                <div class = "section-header">
+                    <h2 class = "top">📊 Quick Stats</h2>
+                </div>
+                <u1 class = "stats-list">
+                    <li><span class="label">Total Assignments</span><span class="value">0</span></li>
+                    <li><span class="label">Completed</span><span class="value" style="color: green;">0</span></li>
+                    <li><span class="label">Due This Week</span><span class="value" style="color: orange;">0</span></li>
+                    <li><span class="label">Overdue</span><span class="value" style="color: red;">0</span></li>
+                </u1>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
