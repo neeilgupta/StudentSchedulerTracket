@@ -66,5 +66,79 @@
             </section>
         </div>
     </main>
+    <!--Assignement Modal-->
+    <div id="assignmentModal" class = "modal-overlay">
+        <div class = "modal-content">
+            <h2>Add New Assignment</h2>
+            <label for="assignment-class">Class</label>
+            <select id="assignment-class">
+                <option value="" disabled selected>Select a class</option>
+                <option>CS 240</option>
+                <option>MA 265</option>
+                 <option>PHYS 172</option>
+            </select>
+            <label for="assignment-title">Assignment Title</label>
+            <input id ="assignment-title" type = "text" placeholder="Enter assignment title"/>
+            
+            <label for="assignment-desc">Description</label>
+            <textarea id="assignment-desc" placeholder="Enter assignment description"></textarea>
+
+            <label for="assignment-due">Due Date</label>
+            <input  id = "assignment-due" type="datetime-local" />
+
+            <div class = "modal-footer">
+                <button onclick="closeModal('assignmentModal')">Cancel</button>
+                <button>Add Assignment</button>
+            </div>
+        </div>
+    </div>
+
+    <!--Class Modal-->
+    <div id="classModal" class="modal-overlay">
+        <div class="modal-content">
+            <h2>Add New Class</h2>
+
+            <label for="class-name">Class Name</label>
+            <input id="class-name" type="text" placeholder="e.g., Introduction to Psychology" />
+
+            <label for="class-code">Class Code</label>
+            <input id="class-code" type="text" placeholder="e.g., PSYC 101" />
+
+            <label for="professor">Professor</label>
+            <input id="professor" type="text" placeholder="Professor name (optional)" />
+
+            <label>Color</label>
+            <div class="color-picker">
+                <span class="color-circle selected" style="background-color: #4a90e2"></span>
+                <span class="color-circle" style="background-color: #bb6bd9"></span>
+                <span class="color-circle" style="background-color: #27ae60"></span>
+                <span class="color-circle" style="background-color: #eb5757"></span>
+                <span class="color-circle" style="background-color: #f2c94c"></span>
+            </div>
+
+            <div class="modal-footer">
+                <button class="cancel-btn" onclick="closeModal('classModal')">Cancel</button>
+                <button class="add-btn">Add Class</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        //JS to open modules
+        document.querySelector(".action-row button:nth-child(1)").onclick = () => openModal("assignmentModal");
+        document.querySelector(".action-row button:nth-child(2)").onclick = () => openModal("classModal");
+        document.querySelector(".add-class-btn").onclick = () => openModal("classModal");
+
+
+        function openModal(id) {
+            document.getElementById(id).style.display = 'flex';
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).style.display = 'none';
+        }
+    </script>
+
+
 </body>
 </html>
