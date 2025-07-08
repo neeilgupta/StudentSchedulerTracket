@@ -71,6 +71,24 @@ button:hover {
   background-color: #bfa16f;
 }
 
+.calendar-button {
+  font-family: "Gill Sans", sans-serif;
+  flex: 1;
+  padding: 0.85rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  background-color: #CEB888;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  text-decoration: none;
+}
+
+.calendar-button:hover {
+  background-color: #bfa16f;
+}
+
 .dashboard-layout {
     display: flex;
     justify-content: space-between;
@@ -97,16 +115,24 @@ button:hover {
 }
 
 
-/* Left Column: Upcoming Assignemtns */
+dashboard-layout {
+    display: flex;
+    align-items: stretch; /* Match column heights */
+    gap: 2rem;
+}
+
+/* 2. Left side (Upcoming Assignments) */
 .assignments-box {
     flex: 2;
+    display: flex;
+    flex-direction: column;
     background-color: white;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     padding: 1.5rem;
 }
 
-/* Right column container: comtaims Classses and Stats */
+/* 3. Right Column - stack classes + stats */
 .right-column {
     flex: 1;
     display: flex;
@@ -114,7 +140,7 @@ button:hover {
     gap: 2rem;
 }
 
-/*Boxes in right column */
+/* 4. Boxes inside right column */
 .classes-box,
 .stats-box {
     background-color: white;
