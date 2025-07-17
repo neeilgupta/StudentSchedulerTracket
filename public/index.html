@@ -139,7 +139,7 @@
         }
 
         //Save a class to local storage
-        function addClassToLocalStorage (newClass) {
+        function saveClassToLocalStorage (newClass) {
             //Get exisiting classes or empty array
             let classes = JSON.parse(localStorage.getItem("classes")) || [];
             classes.push(newClass);
@@ -166,8 +166,51 @@
             `;
                 return;
             }
+            //Loop through each element and display element
+            classes.forEach(cls => {
+                const item = document.createElement("div");
+                item.classList.add("class-item");//Styling
+                item.innerHTML = `
+                <p><strong>${cls.classCode}</strong>: ${cls.className}</p>
+                ${cls.professor ? `<p>Prof: ${cls.professor}</p>`: ""}
+                `;
+                container.append(item);
+            });
 
         }
+
+        //Handle the Add Class Button in the Add CLass modal
+        document.querySelector("#classModal .add-btn").addEventListener("click", () => {
+            //Get input values from  form
+            const className = document.getElementById("class-name").value;
+            const classCode = document.getElementById("class-code").value;
+            const professor = document.getElementById("professor").value;
+
+            //Validate required fields
+            if(!className || !classCode) {
+                alert("Class Name and Class Code are Required");
+                return;
+            }
+
+            //Create a class object
+            const newClass = { className, classCode, professor };
+            //Save to localStorage
+            saveClassToLocalStorage(newClass);
+
+            //Update UI with new classes
+            displayClasses();
+
+            //Close Modal
+            closeModal("classModal")
+
+            //Clear Inputs
+            document.getElementById("class-name").value = "";
+            document.getElementById("class-code").value = "";
+            document.getElementById("professor").value = "";
+        });
+
+        //Show saved classed automatically
+        window.addEventListener("DOMContentLoaded", displayClasses);
     </script>
 
 
