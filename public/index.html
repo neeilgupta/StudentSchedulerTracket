@@ -145,6 +145,27 @@
             classes.push(newClass);
             //Update local storage with new list
             localStorage.setItem("classes", JSON.stringify(classes));
+        }
+
+        //Display all classes from local storage in the UI
+        function displayClasses() {
+            //Retrieve saved classws or empty array
+            let classes = JSON.parse(localStorage.getItem("classes")) || [];
+            //Get the container where classes will be displayed
+            const container = document.querySelector(".classes-box .placeholder")
+
+            //Cleae current HTML
+            container.innerHTML = "";
+
+            //Show default message if no classes
+            if (classes.length == 0) {
+                container.innerHTML = `
+                <div class="placeholder-icon">🎓</div>
+                <strong>No classes yet</strong>
+                <p>Add your first class to get started with assignments.</p>
+            `;
+                return;
+            }
 
         }
     </script>
