@@ -137,6 +137,16 @@
         function closeModal(id) {
             document.getElementById(id).style.display = 'none';
         }
+
+        //Save a class to local storage
+        function addClassToLocalStorage (newClass) {
+            //Get exisiting classes or empty array
+            let classes = JSON.parse(localStorage.getItem("classes")) || [];
+            classes.push(newClass);
+            //Update local storage with new list
+            localStorage.setItem("classes", JSON.stringify(classes));
+
+        }
     </script>
 
 
