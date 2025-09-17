@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%; /* #FFFFFF */
+  --foreground: 0 0% 0%; /* #000000 */
+  --muted: 46 20% 95%; /* #F5F3EF */
+  --muted-foreground: 0 0% 30%; /* #4D4D4D */
+  --popover: 0 0% 100%; /* #FFFFFF */
+  --popover-foreground: 0 0% 0%; /* #000000 */
+  --card: 0 0% 100%; /* #FFFFFF */
+  --card-foreground: 0 0% 0%; /* #000000 */
+  --border: 46 20% 85%; /* #E5E1D8 */
+  --input: 46 20% 85%; /* #E5E1D8 */
+  --primary: 46 48% 69%; /* #CFB991 Boilermaker Gold */
+  --primary-foreground: 0 0% 0%; /* #000000 */
+  --secondary: 0 0% 15%; /* #262626 */
+  --secondary-foreground: 0 0% 100%; /* #FFFFFF */
+  --accent: 46 20% 95%; /* #F5F3EF */
+  --accent-foreground: 0 0% 0%; /* #000000 */
+  --destructive: 0 84% 60%; /* #EF4444 */
+  --destructive-foreground: 0 0% 100%; /* #FFFFFF */
+  --success: 142 69% 47%; /* #10B981 */
+  --warning: 38 92% 50%; /* #F59E0B */
+  --ring: 0 0% 0%; /* #000000 */
+  --radius: 0.75rem;
+}
+
+.dark {
+  --background: 0 0% 0%; /* #000000 */
+  --foreground: 46 48% 69%; /* #CFB991 Boilermaker Gold */
+  --muted: 0 0% 10%; /* #1A1A1A */
+  --muted-foreground: 46 20% 75%; /* #D4C8B5 */
+  --popover: 0 0% 0%; /* #000000 */
+  --popover-foreground: 46 48% 69%; /* #CFB991 */
+  --card: 0 0% 5%; /* #0D0D0D */
+  --card-foreground: 46 48% 69%; /* #CFB991 */
+  --border: 0 0% 15%; /* #262626 */
+  --input: 0 0% 15%; /* #262626 */
+  --primary: 46 48% 69%; /* #CFB991 Boilermaker Gold */
+  --primary-foreground: 0 0% 0%; /* #000000 */
+  --secondary: 0 0% 20%; /* #333333 */
+  --secondary-foreground: 46 48% 69%; /* #CFB991 */
+  --accent: 0 0% 10%; /* #1A1A1A */
+  --accent-foreground: 46 48% 69%; /* #CFB991 */
+  --destructive: 0 84% 60%; /* #EF4444 */
+  --destructive-foreground: 0 0% 100%; /* #FFFFFF */
+  --success: 142 69% 47%; /* #10B981 */
+  --warning: 38 92% 50%; /* #F59E0B */
+  --ring: 46 48% 69%; /* #CFB991 */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-inter antialiased bg-background text-foreground;
+  }
+}
+
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}

@@ -1,0 +1,309 @@
+/* Reset and base styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #F1F1F1;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header {
+  background-color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header .left {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #CEB888;
+}
+
+header .right {
+  display: flex;
+  gap: 2rem;
+}
+
+header .right a {
+  color: #CEB888;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+header .right a:hover {
+  text-decoration: underline;
+}
+
+/* Action Button Container */
+.action-row-container {
+  margin: 2rem;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+}
+
+.action-row {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-between;
+}
+
+/* Buttons */
+button {
+  font-family: "Gill Sans", sans-serif;
+  flex: 1;
+  padding: 0.85rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  background-color: #CEB888;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #bfa16f;
+}
+
+.calendar-button {
+  font-family: "Gill Sans", sans-serif;
+  flex: 1;
+  padding: 0.85rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  background-color: #CEB888;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  text-decoration: none;
+}
+
+.calendar-button:hover {
+  background-color: #bfa16f;
+}
+
+.dashboard-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.section-header {
+    border-bottom: 1.5px solid rgba(0, 0, 0, 0.15);
+    padding-bottom: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.section-header h2{
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+.section-header .subtext {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+
+dashboard-layout {
+    display: flex;
+    align-items: stretch; /* Match column heights */
+    gap: 2rem;
+}
+
+/* 2. Left side (Upcoming Assignments) */
+.assignments-box {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    padding: 1.5rem;
+}
+
+/* 3. Right Column - stack classes + stats */
+.right-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* 4. Boxes inside right column */
+.classes-box,
+.stats-box {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    padding: 1.5rem;
+}
+
+.placeholder {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.add-class-btn {
+    display: block;
+    margin: 1.5 rem auto 0;
+    padding: 0.6rem 1rem;
+    border: 2px dashed #000;
+    border-radius: 8px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.stats-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 1rem;
+}
+
+.stats-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.stats-list .label {
+    font-weight: 500;
+}
+
+.stats-list .value {
+    font-weight: bold;
+}
+
+/* ---------- Modal Overlay ---------- */
+.modal-overlay {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* ---------- Modal Content Box ---------- */
+.modal-content {
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 420px;
+  position: relative;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+/* ---------- Form Elements ---------- */
+.modal-content label {
+  display: block;
+  margin: 12px 0 6px;
+  font-weight: 500;
+}
+
+.modal-content input,
+.modal-content select,
+.modal-content textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.modal-content input:focus,
+.modal-content select:focus,
+.modal-content textarea:focus {
+  outline: none;
+  border-color: #7f5af0;
+  box-shadow: 0 0 0 2px rgba(127, 90, 240, 0.2);
+}
+
+/* ---------- Color Picker Styling ---------- */
+.color-picker {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0 20px;
+}
+
+.color-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.color-circle:hover {
+  transform: scale(1.1);
+}
+
+.color-circle.selected {
+  border: 2px solid #000;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------- Footer Buttons ---------- */
+.modal-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.modal-footer button {
+  flex: 1;
+  padding: 10px 0;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.cancel-btn {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.cancel-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.add-btn {
+  background-color: #a855f7; /* purple */
+  color: white;
+}
+
+.add-btn:hover {
+  background-color: #9333ea;
+}
